@@ -1,0 +1,36 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="main-heading">{{ 'anms.features.map' | translate }}</h1>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12 col-lg-3">
+
+        <!-- Search form -->
+        <form class="form-inline waves-light" mdbWavesEffect>
+          <div class="md-form mt-0" class="search-wrapper">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search by employee name or project">
+          </div>
+        </form>
+
+        <mat-card *ngFor="let employee of employees" [ngClass]="routeAnimationsElements" (click)="clickToEmployee(employee)">
+            <mat-card-header>
+              <img mat-card-avatar src="{{employee.imgUrl}}">
+              <mat-card-title>{{employee.firstName + ' ' + employee.lastName}}</mat-card-title>
+              <mat-card-subtitle>{{employee.jobTitle}}</mat-card-subtitle>
+              <mat-card-subtitle>{{employee.location + ', ' + employee.office + ', ' + getRoomNameById(employee.roomId)}}</mat-card-subtitle>            
+            </mat-card-header>
+            <!-- <mat-card-actions>
+                <button mat-button (click)="editEmployee(employee)">Edit</button>
+            </mat-card-actions> -->
+        </mat-card>
+
+      </div>
+      <div class="col-md-12 col-lg-9 map-container">
+        <div class="map-frame">
+          <div id="map"></div>
+        </div>
+      </div>
+  </div>
+</div>

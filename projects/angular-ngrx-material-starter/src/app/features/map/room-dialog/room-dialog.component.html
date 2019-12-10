@@ -1,0 +1,5 @@
+<h1>{{room.name}}</h1>
+<div *ngFor="let employee of employees" class="employee">
+    <img [src]="employee.imgUrl" />
+    <span>{{employee.firstName + ' ' + employee.lastName}}</span>
+</div>

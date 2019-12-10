@@ -8,6 +8,10 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app/app.component';
 
+import { RoomContentModule } from './features/map/room-dialog/room-dialog.module';
+
+import { RoomContentComponent } from '../app/features/map/room-dialog/room-dialog.component';
+
 @NgModule({
   imports: [
     // angular
@@ -19,9 +23,12 @@ import { AppComponent } from './app/app.component';
     SharedModule,
 
     // app
-    AppRoutingModule
+    AppRoutingModule,
+
+    RoomContentModule
   ],
   declarations: [AppComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [RoomContentComponent]
 })
 export class AppModule {}

@@ -28,6 +28,7 @@
   "anms.features.themes.description": "Flexible theming support for provided and custom components",
   "anms.features.themes.title": "Themes",
   "anms.features.title": "Features",
+  "anms.features.map": "Location Map",
   "anms.features.typescript": "Superior developer experience, code completion, refactoring and less bugs",
   "anms.footer.changelog": "Show changelog",
   "anms.header.github": "Project Github Repository",
@@ -60,6 +61,6 @@
   "anms.settings.themes.sticky-header": "Sticky header",
   "anms.settings.themes.title": "Themes",
   "anms.settings.title": "Settings",
-  "anms.title.long": "Angular NgRx Material Starter",
+  "anms.title.long": "Location Tool",
   "anms.title.short": "Angular Starter"
 }

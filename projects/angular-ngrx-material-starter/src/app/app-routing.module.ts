@@ -20,6 +20,13 @@ const routes: Routes = [
       )
   },
   {
+    path: 'map',
+    loadChildren: () =>
+      import('./features/map/map.module').then(
+        m => m.MapModule
+      )
+  },
+  {
     path: 'settings',
     loadChildren: () =>
       import('./features/settings/settings.module').then(m => m.SettingsModule)
